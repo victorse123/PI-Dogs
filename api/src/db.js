@@ -1,3 +1,4 @@
+const { Temperament } = require('./models/Temperament'); 
 require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
