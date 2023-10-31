@@ -74,20 +74,54 @@ router.get('/search', async(req, res, next) => {
 
 router.post('/dogs', async(req, res) => {
     const {name, height_min, height_max, weight_min, weight_max, temperament} = req.body;
-        if(!name || !height_min || !height_max || !weight_min || !weight_max) {
-        return res.status(400).send({msg: "Falta enviar datos obligatorios"})
-        }   
+    
+    // Define valores válidos para height_min, weight_min, height_max y weight_max
+    const validHeightMin = 20;
+    const validWeightMin = 10;
+    const validHeightMax = 30;
+    const validWeightMax = 15;
+
+    if (!name) {
+        return res.status(400).send({ msg: "Falta enviar datos obligatorios" });
+    }
+
     try {
-    const dog = await Dog.create(req.body)
+        // Crea el nuevo perro con valores válidos
+        const dog = await Dog.create({
+            name,
+            height_min: validHeightMin,
+            height_max: validHeightMax,
+            weight_min: validWeightMin,
+            weight_max: validWeightMax,
+        });
 
-    let tempDb = await Temperament.findAll({where: {id : temperament}})
+        let tempDb = await Temperament.findAll({ where: { id: temperament } });
 
-    await dog.addTemperament(temperament)
+        await dog.addTemperament(temperament);
 
-    return res.status(201).send({msg: "Perro creado correctamente"})
+        return res.status(201).send({ msg: "Perro creado correctamente" });
 
-    } catch (error) {console.log(error)}
+    } catch (error) {
+        console.log(error);
+    }
 })
+
+// router.post('/dogs', async(req, res) => {
+//     const {name, height_min, height_max, weight_min, weight_max, temperament} = req.body;
+//         if(!name || !height_min || !height_max || !weight_min || !weight_max) {
+//         return res.status(400).send({msg: "Falta enviar datos obligatorios"})
+//         }   
+//     try {
+//     const dog = await Dog.create(req.body)
+
+//     let tempDb = await Temperament.findAll({where: {id : temperament}})
+
+//     await dog.addTemperament(temperament)
+
+//     return res.status(201).send({msg: "Perro creado correctamente"})
+
+//     } catch (error) {console.log(error)}
+// })
 
 router.get('/temperaments', async(req, res, next)=> {
     try {
