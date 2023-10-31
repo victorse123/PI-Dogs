@@ -15,7 +15,7 @@ const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
-router.get('/dogs', async(req, res, next) => {
+router.get('/dog', async(req, res, next) => {
     try {
     const dogApi = (await axios.get(`${API}?api_key=${API_KEY}`)).data
     const dogDb = await Dog.findAll({include: Temperament});
@@ -25,12 +25,13 @@ router.get('/dogs', async(req, res, next) => {
 
     const allDog = await validandoDogsApi.concat(validandoDogsDb)
     
+    return res.status(200).send(dog)
     res.json(allDog)
 
     } catch (error) {next(error)}
 })
 
-router.get('/dogs/:idRaza', async(req, res, next) => {
+router.get('/dog/:idRaza', async(req, res, next) => {
     const {idRaza} = req.params;
         if(!idRaza) {
         return res.status(400).send({msg: "Falta enviar datos obligatorios"})
@@ -72,7 +73,7 @@ router.get('/search', async(req, res, next) => {
     } catch (error) {next(error)}
 })
 
-router.post('/dogs', async(req, res) => {
+router.post('/dog', async(req, res) => {
     const {name, height_min, height_max, weight_min, weight_max, temperament} = req.body;
         if(!name || !height_min || !height_max || !weight_min || !weight_max) {
         return res.status(400).send({msg: "Falta enviar datos obligatorios"})
@@ -89,7 +90,7 @@ router.post('/dogs', async(req, res) => {
     } catch (error) {console.log(error)}
 })
 
-router.get('/temperaments', async(req, res, next)=> {
+router.get('/temperament', async(req, res, next)=> {
     try {
     const temperamentos = (await axios.get(`${API}?api_key=${API_KEY}`)).data
     const formateo = temperamentos.map(t => t.temperament)
