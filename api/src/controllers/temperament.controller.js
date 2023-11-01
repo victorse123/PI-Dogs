@@ -41,37 +41,37 @@ const allTemps = async ({temperamento}) => {
     }
 }
 
-const getApiData = async () => {
-    try {
-    const resApi = await fetch(process.env.URI_API)
-        const dataApi = await resApi.json()
-        const temperamentos = []
+// const getApiData = async () => {
+//     try {
+//     const resApi = await fetch(process.env.URI_API)
+//         const dataApi = await resApi.json()
+//         const temperamentos = []
 
-        dataApi.forEach(dogApi => {
-            if(dogApi.temperament){
-                let temps = dogApi.temperament.split(',')
-                temps.forEach(temp => {
-                    const limpio = temp.trim()
-                    if(!temperamentos.includes(limpio)) temperamentos.push(limpio)
-                })
-            }
-        })
+//         dataApi.forEach(dogApi => {
+//             if(dogApi.temperament){
+//                 let temps = dogApi.temperament.split(',')
+//                 temps.forEach(temp => {
+//                     const limpio = temp.trim()
+//                     if(!temperamentos.includes(limpio)) temperamentos.push(limpio)
+//                 })
+//             }
+//         })
 
-        const bulkTemps = temperamentos.map(t => {
-            return {name: t}
-        })
+//         const bulkTemps = temperamentos.map(t => {
+//             return {name: t}
+//         })
 
-        const oneTemp = await Temperament.findOne({where: bulkTemps[bulkTemps.length - 1]})
+//         const oneTemp = await Temperament.findOne({where: bulkTemps[bulkTemps.length - 1]})
 
-        if(!oneTemp){
-            await Temperament.bulkCreate(bulkTemps)
-            return true
-            // return `Data importada desde ${process.env.URI_API} exitosamente. 👌`
-        }
-        return true
-        return 'La data se encuentra en la base de datos, revisar /temperaments'
-    } catch (error) {
-        throw `Ocurrió un problema al extraer data desde Api : ${process.env.URI_API}`
-    }
-}
-module.exports = { newTemp, allTemps, getApiData}
+//         if(!oneTemp){
+//             await Temperament.bulkCreate(bulkTemps)
+//             return true
+//             // return `Data importada desde ${process.env.URI_API} exitosamente. 👌`
+//         }
+//         return true
+//         return 'La data se encuentra en la base de datos, revisar /temperaments'
+//     } catch (error) {
+//         throw `Ocurrió un problema al extraer data desde Api : ${process.env.URI_API}`
+//     }
+// }
+// module.exports = { newTemp, allTemps, getApiData}
