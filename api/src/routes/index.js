@@ -2,7 +2,7 @@ const { Router} = require('express');
 
 const axios = require('axios');
 const {API, API_SEARCH, API_KEY} = process.env;
-const {Dog, Temperament} = require("../db")
+const { Dog, Temperament } = require("../db")
 const { Op } = require('sequelize');
 const {formateoDb, formateoApi} = require("../controllers/controllers");
 
