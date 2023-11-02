@@ -15,18 +15,29 @@ const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
+// Ruta de prueba
+router.get('/', (req, res) => {
+    res.send('¡Hola, mundo!'); 
+  });
+  
+// Ruta de prueba
+// router.get('/dog', (req, res) => {
+//     res.send('¡Hola, mundo de los perros!');
+//   });
+
 router.get('/dog', async(req, res, next) => {
     try {
-    const dogApi = (await axios.get(`${API}?api_key=${API_KEY}`)).data
+    const dogApi = (await axios.get(`${API}?api_key=${API_KEY}`))
     const dogDb = await Dog.findAll({include: Temperament});
 
     const validandoDogsDb = await formateoDb(dogDb)
     const validandoDogsApi = await formateoApi(dogApi)
 
     const allDog = await validandoDogsApi.concat(validandoDogsDb)
+    console.log(dogApi);
+    return res.status(200).json(allDog)
     
-    return res.status(200).send(dog)
-    res.json(allDog)
+    
 
     } catch (error) {next(error)}
 })
