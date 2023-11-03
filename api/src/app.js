@@ -24,7 +24,8 @@ server.use((req, res, next) => {
 });
 
 server.use(cors());
-server.use('/dogs', routes);
+server.use('/', routes);
+
 
 
 // Error catching endware.
