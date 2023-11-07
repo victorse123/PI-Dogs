@@ -21,15 +21,14 @@ const postDogs = async (req, res) => {
                     height_max,
                     weight_min,
                     weight_max,
-                    life_span_min,
-                    life_span_max,
+                    life_span,
                     temperament }
             
             });
             if(creado){
                 
 
-                return res.status(200).json('Se agrego con exito a '+dog.name);}
+                res.status(200).json('Se agrego con exito a '+dog.name);}
         }else{
             res.status(404).json({message:'Faltan datos'})
         }
