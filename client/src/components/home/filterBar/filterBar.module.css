@@ -1,0 +1,64 @@
+.container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:95px 10% 15px 10%;
+    /* display: flex;
+    align-items: center; */
+    background-color:#751b65;
+    background-image: url('../../../images/bg2.webp');
+}
+
+.filterItem{
+    padding: 10px;
+}
+
+.textInput{
+    color: #ffd868;
+    border: 2px solid #ffd868;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #751b65;
+}
+.textInput::placeholder{
+    color: #ffd868;
+}
+/* IE 10 */
+.textInput:-ms-input-placeholder{
+    color: #ffd868;
+}
+/* EDGE */
+.textInput::-ms-input-placeholder{
+    color: #ffd868;
+}
+
+.textInput:focus{
+    outline: none !important;
+    background-color: white;
+    border: 0;
+    color: black;
+    box-shadow: 0 0 1px black;
+}
+
+input:focus::placeholder {
+    color: purple;
+}
+
+.btnCont{
+    display: flex;
+    align-items: center;
+}
+
+.searchBtn{
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.searchBtn:hover{
+    height: 25px;
+}
+
+.btnIcon{
+    height: 100%;
+}

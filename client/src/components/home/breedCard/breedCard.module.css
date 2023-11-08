@@ -1,0 +1,114 @@
+.container{
+    padding: 20px 10%;
+}
+.wrapper{
+    background-color:#751b65;
+    background-image: url('../../../images/paws.png');
+    background-repeat: no-repeat;
+    background-position: 200% 10%;
+    display: flex;
+    border-radius: 20px;
+    padding: 35px 0;
+    box-shadow: 0px 2px 31.28px 14.72px rgba(0, 0, 0, 0.15);
+}
+.leftPanel{
+    display: inline;
+    margin-left: 50px;
+    justify-content: flex-start;
+}
+
+.midPanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.profileImg{
+    /* width: 270;
+    height: auto;
+    border-radius: 20px; */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.subTitleBox{
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+.subTitle{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 3.2px;
+    padding-left: 66px;
+    position: relative;
+    text-transform: uppercase;
+}
+h2, h5{
+    margin: 5px 10px;
+}
+.subTitle::before{
+    background-color: #ffd868;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: calc(50% - 2px);
+    width: 50px;
+}
+
+.title{
+    font-size: 40px;
+    /* margin-bottom: 22px; */
+    font-weight: 800;
+    line-height: 1.181;
+    color: #fff;
+}
+
+.weightText{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.181;
+    color: #fff;
+}
+
+.mainBtn{
+    font-size: 14px;
+    height: 44px;
+    line-height: 46px;
+    width: 140px;
+    color:#ffd868;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    padding: 0 10px;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    z-index: 3;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.mainBtn:before{
+    border: 2px solid #ffd868;
+    border-radius: 20px;
+    content: "";
+    height: 98%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 99%;
+    z-index: -1;
+}
+
+.mainBtn:hover{
+    background-color: #ffd868;
+    color: white;
+}
