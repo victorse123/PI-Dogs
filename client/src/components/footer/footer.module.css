@@ -1,0 +1,25 @@
+.footerCont{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: end;
+}
+
+.footerLine{
+    border: 1px solid #721b6536;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footerText{
+    color: #721b65;
+    font-size: 12px;
+    margin-top: 0;
+    line-height: 28px;
+    position: relative;
+    top: 1px;
+}
+.linkStyle{
+    text-decoration: none;
+}
