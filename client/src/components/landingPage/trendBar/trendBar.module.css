@@ -1,0 +1,69 @@
+.container{
+    background-color: #f2f2f2;
+    color: white;
+    height: auto;
+}
+
+.superTitle{
+    color: #721b65;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-transform: uppercase;  
+}
+
+.titleCont{
+    text-align: center!important;
+    padding-top: 100px;
+    margin-bottom: 40px;
+}
+.pawImg{
+    content: url('../../../images/sec.webp');
+    transform: rotate(45deg);
+    height: 80px;
+    width: auto;
+}
+
+.title{
+    font-size: 48px;
+    line-height: 1.125;
+    margin-bottom: 0;
+    color: #2c2c2c;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+.iconCont{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+.iconItem{
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.thump{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.iconImg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.iconTitle{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    color: black;
+}

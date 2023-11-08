@@ -1,0 +1,113 @@
+.container{
+    padding: 125px 10% 30px 10%;
+    background-color:#751b65;
+    background-image: url('../../images/bg2.webp');
+    min-height: 560px;
+    max-height: 680px;
+    display: flex;
+}
+.leftCont{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    padding-right: 40%;
+    /* background-color: red; */
+}
+
+.rightCont{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    /* background-color: aqua; */
+}
+
+.subTitleBox{
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+.subTitle{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 3.2px;
+    padding-left: 66px;
+    position: relative;
+    text-transform: uppercase;
+}
+.subTitle::before{
+    background-color: #ffd868;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: calc(50% - 2px);
+    width: 50px;
+}
+
+.title{
+    font-size: 40px;
+    margin-bottom: 22px;
+    font-weight: 800;
+    line-height: 1.181;
+    color: #fff;
+    padding-right: 10%;
+    align-self: center;
+}
+
+.mainBtn{
+    font-size: 14px;
+    height: 44px;
+    line-height: 46px;
+    width: 140px;
+    color:#ffd868;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    padding: 0 10px;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    z-index: 3;
+    cursor: pointer;
+}
+.mainBtn:before{
+    border: 2px solid #ffd868;
+    border-radius: 20px;
+    content: "";
+    height: 98%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 99%;
+    z-index: -1;
+}
+
+.mainBtn:hover{
+    background-color: #ffd868;
+    color: white;
+}
+
+.mainBanner{
+    height: 400px;
+    width: auto;
+    position: absolute;
+    bottom: 155px;
+    left: calc(55% + 38px);
+    z-index: 2;
+}
+
+.shapeOne{
+    background-color: #ffd868;
+    border-radius: 50%;
+    height: 450px;
+    position: relative;
+    left: -30px;
+    width: 450px;
+}
