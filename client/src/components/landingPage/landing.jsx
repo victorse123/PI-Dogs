@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import TrendBar from './trendBar/trendBar'
+//import trendBar from './trendBar/trendBar';
 import { container, subTitleBox, subTitle, title, mainBtn, rightCont, mainBanner, leftCont } from './landing.module.css'
 import huskyImg from '../../images/huskyclean.png'
 import { getAllBreeds } from "../../actions";
