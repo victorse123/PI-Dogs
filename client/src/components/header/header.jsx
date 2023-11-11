@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from "react"
 import { Link, NavLink } from "react-router-dom";
 import { container, header, logoLink, linksCont, linkItem, active } from './header.module.css'

@@ -13,7 +13,7 @@ hr{
     border-bottom: 1px solid #fff;
 }
 .mainRow{
-    background-image: url(../../images/moto.jpg);
+    /* background-image: url(); */
     background-size: cover;
     background-position: bottom;
     max-height: 500px;
@@ -32,7 +32,7 @@ hr{
     color: white;
 }
 .wrapper{
-    max-width: 900;
+    max-width: 900px;
     margin: 0 auto;
 }
 .flex{

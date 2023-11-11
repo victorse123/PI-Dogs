@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import React from "react";
 import {
     container,
@@ -5,7 +6,7 @@ import {
     mainRow,
     wrapper,
     flex,
-    profilePhoto,
+    //profilePhoto,
     mainTitle,
     aboutMeRow,
     leftCol,
@@ -18,16 +19,16 @@ import {
     skillRow,
     skillCont
 } from './about.module.css'
-import chrisIm from '../../images/chris.jpg'
+//import Victor from 'images/Victor.png'
 
 const About = () =>{
     return(
         <div className={container}>
             <div className={row+' '+ mainRow}>
                 <div className={wrapper+' '+flex}>
-                    <div className="left-col">
-                        <img src={chrisIm} className={profilePhoto} alt="" />
-                    </div>
+                    {/* <div className="left-col">
+                        <img src={Victor} className={profilePhoto} alt="Victor" />
+                    </div> */}
                     <div className={mainTitle}>
                         <h1>Victor Alfonso Sepulveda</h1>
                         <h5>Web Developer | victorseva123@gmail.com </h5>

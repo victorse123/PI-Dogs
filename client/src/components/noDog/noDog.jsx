@@ -1,15 +1,15 @@
 import React from "react"
 import { container, mainCont, reverseLeftCont, stepOneStyle, reverseRightCont, title } from './noDog.module.css';
-import noDog from '../../images/noDog.png'
+//import noDog from 'images/noDog.png';
 
 const NoDog = () =>{
     return(
         <div className={container}>
             <section className={mainCont}>
                 {/* LEFT PANEL */}
-                <div className={reverseLeftCont}>
+                {/* <div className={reverseLeftCont}>
                     <img className={stepOneStyle} src={noDog} alt="" />
-                </div>
+                </div> */}
 
                 {/* RIGHT PANEL */}
                 <div className={reverseRightCont}>
