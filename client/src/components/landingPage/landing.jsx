@@ -25,7 +25,7 @@ const Landing = () =>{
                     <div className={subTitleBox}>
                         <h5 className={subTitle}>Charlie Chaplin</h5>
                     </div>
-                    <h2 className={title} onClick={test}>"Who feeds a hungry animal, feeds his own soul."</h2>
+                    <h2 className={title} onClick={test}>"Love is a four-legged word."</h2>
                     <Link to='/home' className={mainBtn}>SEARCH BREEDS</Link>
                 </div>
 

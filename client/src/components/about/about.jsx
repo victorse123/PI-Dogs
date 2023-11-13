@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-useless-escape */
 import React from "react";
 import {
-    container,
+    //container,
     row,
     mainRow,
     wrapper,
@@ -10,7 +11,7 @@ import {
     mainTitle,
     aboutMeRow,
     leftCol,
-    rightCol,
+    //rightCol,
     eduRow,
     noB,
     eduItem,
@@ -23,7 +24,7 @@ import {
 
 const About = () =>{
     return(
-        <div className={container}>
+        <div>
             <div className={row+' '+ mainRow}>
                 <div className={wrapper+' '+flex}>
                     {/* <div className="left-col">
@@ -41,7 +42,7 @@ const About = () =>{
                     <div className={leftCol}>
                         <h5>ACERCA DE</h5>
                     </div>
-                    <div className={rightCol}>
+                    {/* <div className={rightCol}>
                         <p>
                             Soy un desarrollador de aplicaciones web y programador Full Stack, con 3 años de experiencia.
                             Me apasiona la I.A., la tecnología y todos los medios de comunicación visual. Amante del saber cómo funcionan
@@ -51,7 +52,7 @@ const About = () =>{
                             Mi experiencia y trabajo como programador. Al terminar el curso me gustaría tener la seguridad, que poseo el
                             conocimiento y las habilidades para competir laboralmente en un mejor nivel, y con empresas de nivel mundial.
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
